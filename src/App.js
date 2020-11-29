@@ -14,6 +14,14 @@ class App extends Component {
     return (
       <div>
         <NavBar />
+        <div className='content' >
+        <Switch>
+        <Route path='/product' component={Products} />
+        <Route path='/posts' component={Posts} />
+        <Route path='/admin' component={Dashboard} />
+        <Route path='/' exact component={Home} />
+        </Switch>
+        </div>
       </div>
     );
   }
